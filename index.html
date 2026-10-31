@@ -42,10 +42,23 @@
     .topline span { opacity: .85; }
     .topline a { color: var(--yellow); font-weight: 700; }
     header { position: sticky; top: 0; z-index: 20; background: rgba(248,247,243,.94); border-bottom: 1px solid rgba(232,229,221,.85); backdrop-filter: blur(14px); }
-    .nav { min-height: 78px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+    .nav { min-height: 96px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
     .brand { display: inline-flex; align-items: center; gap: 11px; min-width: max-content; }
     .brand-mark { width: 43px; height: 43px; border-radius: 14px 14px 14px 5px; background: var(--red); display: grid; place-items: center; position: relative; box-shadow: 4px 4px 0 var(--yellow); transform: rotate(-3deg); }
     .brand-mark svg { width: 26px; height: 26px; transform: rotate(3deg); }
+    .brand-logo { display: block; object-fit: contain; flex: 0 0 auto; }
+    .brand-logo[hidden] { display: none !important; }
+    .brand-logo.mode-full { width: auto; height: 54px; max-width: 245px; }
+    /* Logo resmi SumberMas: ukuran khusus agar emblem terbaca di header dan footer. */
+    #headerBrandLogo.mode-full { width: 126px; height: auto; max-width: 126px; }
+    #footerBrandLogo.mode-full { width: 104px; height: auto; max-width: 104px; }
+    #headerBrand.logo-full .brand-copy { display: block; }
+    #headerBrand.logo-full .brand-name { display: none; }
+    #headerBrand.logo-full { gap: 9px; }
+    .brand-logo.mode-symbol { width: 43px; height: 43px; }
+    .brand.logo-full { gap: 0; }
+    .brand.logo-full .brand-mark, .brand.logo-symbol .brand-mark { display: none; }
+    .brand.logo-full .brand-copy { display: none; }
     .brand-name { font-weight: 900; letter-spacing: -.055em; font-size: 18px; line-height: 1; }
     .brand-sub { color: var(--muted); font-size: 8px; font-weight: 800; letter-spacing: .17em; display: block; margin-top: 5px; }
     .nav-links { display: flex; gap: 27px; align-items: center; font-size: 13px; font-weight: 700; color: #454545; }
@@ -205,6 +218,8 @@
       .topline-inner { justify-content: center; text-align: center; min-height: 32px; }
       .topline span { display: none; }
       .nav { min-height: 68px; }
+      #headerBrandLogo.mode-full { width: 78px; max-width: 78px; height: auto; }
+      #headerBrand.logo-full .brand-sub { font-size: 7px; letter-spacing: .11em; }
       .menu-toggle { display: inline-flex; }
       .nav-cta { display: none; }
       .nav-links { display: none; position: absolute; top: 68px; left: 0; right: 0; padding: 14px 22px 20px; background: var(--paper); border-bottom: 1px solid var(--line); flex-direction: column; align-items: flex-start; gap: 17px; }
@@ -254,9 +269,10 @@
   </div>
   <header>
     <div class="container nav">
-      <a class="brand" href="#beranda" aria-label="Cetak Cepat SumberMas Beranda">
-        <span class="brand-mark"><svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M7 22.5 13.5 9h5L25 22.5h-5l-1.1-2.7h-6l-1.1 2.7H7Z" fill="#fff"/><path d="M14.4 16.4h4.2l-2.1-5.2-2.1 5.2Z" fill="#F8C928"/></svg></span>
-        <span><span class="brand-name" id="brandName">SUMBERMAS</span><span class="brand-sub" id="brandTagline">CETAK CEPAT FULL COLOUR</span></span>
+      <a class="brand" id="headerBrand" href="#beranda" aria-label="Cetak Cepat SumberMas Beranda">
+        <span class="brand-mark" id="headerBrandMark"><svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M7 22.5 13.5 9h5L25 22.5h-5l-1.1-2.7h-6l-1.1 2.7H7Z" fill="#fff"/><path d="M14.4 16.4h4.2l-2.1-5.2-2.1 5.2Z" fill="#F8C928"/></svg></span>
+        <img class="brand-logo" id="headerBrandLogo" alt="Logo Cetak Cepat SumberMas" hidden />
+        <span class="brand-copy" id="headerBrandCopy"><span class="brand-name" id="brandName">SUMBERMAS</span><span class="brand-sub" id="brandTagline">CETAK CEPAT FULL COLOUR</span></span>
       </a>
       <nav class="nav-links" id="navLinks">
         <a href="#layanan">Layanan</a><a href="#katalog">Katalog</a><a href="#lokasi">Lokasi</a><a href="#kontak">Kontak</a>
@@ -323,7 +339,7 @@
   </main>
 
   <footer><div class="container"><div class="footer-grid">
-    <div class="footer-brand"><a class="brand" href="#beranda"><span class="brand-mark"><svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M7 22.5 13.5 9h5L25 22.5h-5l-1.1-2.7h-6l-1.1 2.7H7Z" fill="#fff"/><path d="M14.4 16.4h4.2l-2.1-5.2-2.1 5.2Z" fill="#F8C928"/></svg></span><span><span class="brand-name" id="footerBrandName">SUMBERMAS</span><span class="brand-sub" id="footerBrandTagline">CETAK CEPAT FULL COLOUR</span></span></a><p id="footerDescription">Solusi digital printing, offset printing, dan hot print untuk kebutuhan promosi, bisnis, event, dan personal.</p><a class="email-contact" id="footerEmail" hidden></a></div>
+    <div class="footer-brand"><a class="brand" id="footerBrand" href="#beranda"><span class="brand-mark" id="footerBrandMark"><svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M7 22.5 13.5 9h5L25 22.5h-5l-1.1-2.7h-6l-1.1 2.7H7Z" fill="#fff"/><path d="M14.4 16.4h4.2l-2.1-5.2-2.1 5.2Z" fill="#F8C928"/></svg></span><img class="brand-logo" id="footerBrandLogo" alt="Logo Cetak Cepat SumberMas" hidden /><span class="brand-copy" id="footerBrandCopy"><span class="brand-name" id="footerBrandName">SUMBERMAS</span><span class="brand-sub" id="footerBrandTagline">CETAK CEPAT FULL COLOUR</span></span></a><p id="footerDescription">Solusi digital printing, offset printing, dan hot print untuk kebutuhan promosi, bisnis, event, dan personal.</p><a class="email-contact" id="footerEmail" hidden></a></div>
     <div class="footer-col"><strong>Jelajahi</strong><a href="#layanan">Layanan</a><a href="#katalog">Katalog produk</a><a href="#lokasi">Lokasi cabang</a><a id="footerInstagram" href="https://www.instagram.com/cetakcepatsumbermas/" target="_blank" rel="noopener">Instagram ↗</a></div>
     <div class="footer-col"><strong>Kontak cabang</strong><div id="footerContacts"></div></div>
   </div><div class="copyright"><span>© <span id="year"></span> <span id="copyrightBrand">Cetak Cepat SumberMas</span>. All rights reserved.</span><span id="copyrightLine">Digital Printing · Offset · Hot Print</span></div></div></footer>

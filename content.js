@@ -27,6 +27,11 @@ window.SUMBERMAS_CONTENT = {
     name: "Cetak Cepat SumberMas",
     brandName: "SUMBERMAS",
     tagline: "CETAK CEPAT FULL COLOUR",
+    logo: {
+      image: "assets/logo-sumbermas.png", // Logo resmi SumberMas, disimpan lokal di folder assets/.
+      mode: "full", // "full" = logo lengkap; "symbol" = ikon saja + nama di sebelahnya.
+      alt: "Logo Cetak Cepat SumberMas"
+    },
     description: "Solusi digital printing, offset printing, dan hot print untuk kebutuhan bisnis, promosi, event, dan personal. Tersedia di Surabaya dan Banjarmasin.",
     ogDescription: "Digital printing, offset, dan hot print. Konsultasikan kebutuhan cetak Anda melalui WhatsApp.",
     topLine: "DIGITAL PRINTING · OFFSET · HOT PRINT",

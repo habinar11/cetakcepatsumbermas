@@ -48,6 +48,33 @@
     setText('brandTagline', site.tagline);
     setText('footerBrandName', site.brandName);
     setText('footerBrandTagline', site.tagline);
+
+    // Logo dapat diubah melalui site.logo di content.js.
+    const logoConfig = site.logo || {};
+    const logoPath = clean(logoConfig.image);
+    const logoMode = logoConfig.mode === 'symbol' ? 'symbol' : 'full';
+    [
+      { brand: 'headerBrand', image: 'headerBrandLogo' },
+      { brand: 'footerBrand', image: 'footerBrandLogo' }
+    ].forEach(({ brand, image }) => {
+      const brandEl = document.getElementById(brand);
+      const imageEl = document.getElementById(image);
+      if (!brandEl || !imageEl) return;
+      if (logoPath) {
+        imageEl.src = logoPath;
+        imageEl.alt = logoConfig.alt || `Logo ${site.name}`;
+        imageEl.className = `brand-logo mode-${logoMode}`;
+        imageEl.hidden = false;
+        brandEl.classList.toggle('logo-full', logoMode === 'full');
+        brandEl.classList.toggle('logo-symbol', logoMode === 'symbol');
+        imageEl.addEventListener('error', () => {
+          imageEl.hidden = true;
+          brandEl.classList.remove('logo-full', 'logo-symbol');
+          console.warn(`SumberMas: file logo tidak ditemukan: ${logoPath}`);
+        }, { once: true });
+      }
+    });
+
     setText('copyrightBrand', site.name);
     setText('copyrightLine', site.copyrightLine || '');
 
