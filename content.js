@@ -28,7 +28,7 @@ window.SUMBERMAS_CONTENT = {
     brandName: "SUMBERMAS",
     tagline: "CETAK CEPAT FULL COLOUR",
     logo: {
-      image: "assets/logo-sumbermas.png", // Logo resmi SumberMas, disimpan lokal di folder assets/.
+      image: "logo-sumbermas.png", // Logo resmi SumberMas, disimpan lokal di folder assets/.
       mode: "full", // "full" = logo lengkap; "symbol" = ikon saja + nama di sebelahnya.
       alt: "Logo Cetak Cepat SumberMas"
     },
