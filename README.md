@@ -72,6 +72,26 @@ Harga variasi yang diisi angka akan diformat ke Rupiah secara otomatis. Harga `n
 - `branches[].mapQuery`: alamat/kata kunci yang digunakan untuk memuat peta.
 - `branches[].mapUrl`: URL saat pengunjung menekan tombol Google Maps.
 
+
+## Cara mengganti logo
+
+1. Logo resmi SumberMas yang diberikan sudah dipasang di `assets/logo-sumbermas.png` dengan latar luar transparan.
+2. Jika ingin mengganti lagi, unggah file logo baru ke folder `assets/`.
+3. Buka `content.js`, cari `site.logo`, lalu ubah path file:
+
+```js
+logo: {
+  image: "assets/logo-sumbermas.png",
+  mode: "full", // gunakan "symbol" jika file hanya ikon; nama bisnis tampil di samping
+  alt: "Logo Cetak Cepat SumberMas"
+}
+```
+
+4. Simpan, lalu upload/commit file logo dan perubahan `content.js` ke GitHub.
+5. Refresh website. Logo di header dan footer akan ikut berubah.
+
+Untuk logo yang sekarang, `mode: "full"` menampilkan emblem lengkap di header dan footer. Logo header sudah disesuaikan untuk desktop dan mobile.
+
 ## Data yang masih perlu diverifikasi
 
 1. Konfirmasi alamat rinci cabang Banjarmasin Pusat dan cabang Hasanudin berikut titik Google Maps yang tepat.
