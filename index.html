@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#f8f7f3" />
+  <meta name="description" content="Cetak Cepat SumberMas — digital printing, offset printing, dan hot print untuk kebutuhan bisnis, promosi, event, dan personal." />
+  <meta property="og:title" content="Cetak Cepat SumberMas | Cetak Ide Jadi Nyata" />
+  <meta property="og:description" content="Digital printing, offset, dan hot print. Konsultasikan kebutuhan cetak Anda melalui WhatsApp." />
+  <meta property="og:type" content="website" />
+  <title>Cetak Cepat SumberMas | Cetak Ide Jadi Nyata</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <style>
+    :root {
+      --ink: #171717;
+      --muted: #686868;
+      --paper: #f8f7f3;
+      --white: #fff;
+      --red: #e33b2f;
+      --red-dark: #bd2c24;
+      --yellow: #f8c928;
+      --line: #e8e5dd;
+      --green: #168b58;
+      --radius: 22px;
+      --shadow: 0 18px 55px rgba(32, 28, 19, .09);
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--paper);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.55;
+    }
+    a { color: inherit; text-decoration: none; }
+    button, input, select, textarea { font: inherit; }
+    .container { width: min(1160px, calc(100% - 44px)); margin: 0 auto; }
+    .topline { background: var(--ink); color: #fff; font-size: 12px; letter-spacing: .04em; }
+    .topline-inner { min-height: 35px; display: flex; align-items: center; justify-content: space-between; gap: 15px; }
+    .topline span { opacity: .85; }
+    .topline a { color: var(--yellow); font-weight: 700; }
+    header { position: sticky; top: 0; z-index: 20; background: rgba(248,247,243,.94); border-bottom: 1px solid rgba(232,229,221,.85); backdrop-filter: blur(14px); }
+    .nav { min-height: 78px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+    .brand { display: inline-flex; align-items: center; gap: 11px; min-width: max-content; }
+    .brand-mark { width: 43px; height: 43px; border-radius: 14px 14px 14px 5px; background: var(--red); display: grid; place-items: center; position: relative; box-shadow: 4px 4px 0 var(--yellow); transform: rotate(-3deg); }
+    .brand-mark svg { width: 26px; height: 26px; transform: rotate(3deg); }
+    .brand-name { font-weight: 900; letter-spacing: -.055em; font-size: 18px; line-height: 1; }
+    .brand-sub { color: var(--muted); font-size: 8px; font-weight: 800; letter-spacing: .17em; display: block; margin-top: 5px; }
+    .nav-links { display: flex; gap: 27px; align-items: center; font-size: 13px; font-weight: 700; color: #454545; }
+    .nav-links a:hover { color: var(--red); }
+    .nav-cta, .btn { border: 0; border-radius: 999px; background: var(--red); color: #fff; font-weight: 800; display: inline-flex; align-items: center; justify-content: center; gap: 9px; padding: 13px 19px; cursor: pointer; transition: .2s ease; box-shadow: 0 8px 20px rgba(227,59,47,.16); }
+    .nav-cta { font-size: 12px; padding: 12px 17px; }
+    .btn:hover, .nav-cta:hover { background: var(--red-dark); transform: translateY(-2px); }
+    .btn.secondary { background: #fff; color: var(--ink); box-shadow: none; border: 1px solid var(--line); }
+    .btn.secondary:hover { border-color: #c9c4b8; background: #fff; }
+    .menu-toggle { display: none; border: 1px solid var(--line); background: white; border-radius: 12px; padding: 9px 11px; cursor: pointer; }
+    .hero { position: relative; overflow: hidden; padding: 75px 0 66px; }
+    .hero:before { content: ""; position: absolute; width: 470px; height: 470px; border-radius: 50%; background: #f8c928; opacity: .16; right: -140px; top: -210px; }
+    .hero:after { content: ""; position: absolute; width: 240px; height: 240px; border: 1px solid #e9d9a1; border-radius: 50%; right: 11%; bottom: -155px; }
+    .hero-grid { display: grid; grid-template-columns: 1.02fr .98fr; align-items: center; gap: 52px; position: relative; z-index: 1; }
+    .eyebrow { display: inline-flex; align-items: center; gap: 8px; background: #fff2d0; color: #7a5200; border-radius: 999px; padding: 7px 12px; font-size: 10px; font-weight: 900; text-transform: uppercase; letter-spacing: .13em; }
+    .eyebrow i { width: 7px; height: 7px; background: var(--red); border-radius: 50%; display: inline-block; }
+    h1 { font-size: clamp(43px, 5.6vw, 72px); line-height: .99; letter-spacing: -.075em; margin: 23px 0 19px; max-width: 620px; }
+    h1 .accent { color: var(--red); position: relative; white-space: nowrap; }
+    h1 .accent:after { content: ""; height: 9px; position: absolute; left: 2px; right: 0; bottom: -8px; border-radius: 100%; border-top: 4px solid var(--yellow); transform: rotate(-2deg); }
+    .hero-copy { color: #5f5d57; font-size: 16px; max-width: 490px; margin: 0 0 28px; }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 11px; }
+    .hero-proof { display: flex; align-items: center; gap: 13px; margin-top: 32px; color: #77736a; font-size: 11px; }
+    .proof-dot { width: 30px; height: 30px; border-radius: 50%; background: #fff; border: 1px solid var(--line); display: grid; place-items: center; color: var(--red); font-weight: 900; }
+    .hero-art { min-height: 440px; position: relative; display: flex; align-items: center; justify-content: center; }
+    .art-back { position: absolute; width: 78%; height: 78%; right: 5%; top: 10%; background: var(--yellow); border-radius: 44% 56% 42% 58% / 51% 39% 61% 49%; transform: rotate(7deg); }
+    .art-frame { z-index: 1; width: min(440px, 100%); height: 360px; border: 10px solid #fff; border-radius: 26px; overflow: hidden; background: #eee4cb; box-shadow: var(--shadow); position: relative; transform: rotate(-3deg); }
+    .art-frame img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .art-frame:before { content: "CETAK BANNER\A X-BANNER\A FULL COLOUR"; white-space: pre; position: absolute; inset: 0; z-index: 0; display: grid; place-items: center; background: linear-gradient(135deg, #fff0be, #f0bf4e 55%, #e33b2f 56%, #c52e25); color: #fff; font-weight: 950; font-size: clamp(24px, 3vw, 39px); line-height: .98; letter-spacing: -.06em; text-align: center; text-shadow: 2px 3px 0 rgba(0,0,0,.13); }
+    .art-frame.img-loaded:before { display: none; }
+    .art-frame.img-fallback { display: grid; place-items: center; background: linear-gradient(135deg, #fff0be, #f0bf4e 55%, #e33b2f 56%, #c52e25); }
+    .art-frame.img-fallback:after { content: none; }
+    .product-image:before { content: attr(data-fallback); position: absolute; inset: 0; z-index: 0; display: grid; place-items: center; padding: 18px; background: linear-gradient(135deg, #f6e8c3, #f7d6cb); color: #4a302c; font-weight: 950; font-size: 19px; letter-spacing: -.06em; text-align: center; text-transform: uppercase; }
+    .product-image.img-loaded:before, .product-image.img-fallback:before { display: none; }
+    .product-image.img-fallback { display: grid; place-items: center; background: linear-gradient(135deg, #f6e8c3, #f7d6cb); }
+    .product-image.img-fallback:after { content: attr(data-fallback); color: #4a302c; font-weight: 950; font-size: 19px; letter-spacing: -.06em; text-align: center; padding: 18px; text-transform: uppercase; }
+    .art-badge { position: absolute; z-index: 2; right: 2%; bottom: 5%; width: 132px; height: 132px; background: var(--red); color: #fff; display: flex; align-items: center; justify-content: center; text-align: center; border-radius: 50%; border: 7px solid var(--paper); font-size: 13px; line-height: 1.1; font-weight: 900; transform: rotate(10deg); box-shadow: 0 12px 25px rgba(0,0,0,.12); }
+    .art-badge span { display: block; color: var(--yellow); font-size: 25px; }
+    .floating-label { position: absolute; z-index: 3; left: -1%; top: 8%; background: #fff; padding: 12px 15px; border-radius: 13px; box-shadow: var(--shadow); font-size: 11px; font-weight: 900; transform: rotate(-5deg); }
+    .floating-label small { display: block; color: #8b877e; font-weight: 600; margin-top: 3px; }
+    .strip { background: var(--ink); color: #fff; padding: 18px 0; }
+    .strip-inner { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 13px 25px; align-items: center; }
+    .strip-item { display: flex; align-items: center; gap: 10px; font-size: 12px; font-weight: 700; }
+    .strip-icon { width: 29px; height: 29px; display: grid; place-items: center; color: var(--yellow); border: 1px solid #494949; border-radius: 9px; font-size: 14px; }
+    section { padding: 86px 0; }
+    .section-head { display: flex; justify-content: space-between; align-items: end; gap: 25px; margin-bottom: 29px; }
+    .kicker { color: var(--red); font-size: 10px; font-weight: 900; letter-spacing: .16em; text-transform: uppercase; margin-bottom: 10px; }
+    h2 { font-size: clamp(30px, 4vw, 45px); line-height: 1.05; letter-spacing: -.06em; margin: 0; }
+    .section-desc { max-width: 405px; color: var(--muted); font-size: 13px; margin: 0; }
+    .filter-row { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 25px; }
+    .filter-btn { border: 1px solid var(--line); background: #fff; border-radius: 999px; padding: 9px 14px; font-size: 11px; font-weight: 800; color: #555; cursor: pointer; transition: .2s; }
+    .filter-btn:hover, .filter-btn.active { background: var(--ink); color: #fff; border-color: var(--ink); }
+    .product-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 17px; }
+    .product-card { background: #fff; border: 1px solid var(--line); border-radius: 18px; overflow: hidden; transition: .25s; min-width: 0; }
+    .product-card:hover { transform: translateY(-5px); box-shadow: var(--shadow); }
+    .product-card[hidden] { display: none; }
+    .product-image { height: 190px; overflow: hidden; position: relative; background: #f0e9d9; }
+    .product-image img { width: 100%; height: 100%; display: block; object-fit: cover; transition: transform .35s; }
+    .product-card:hover .product-image img { transform: scale(1.05); }
+    .product-type { position: absolute; top: 12px; left: 12px; background: rgba(255,255,255,.93); padding: 6px 9px; border-radius: 999px; font-size: 9px; font-weight: 900; text-transform: uppercase; letter-spacing: .09em; }
+    .product-content { padding: 17px 17px 18px; }
+    .product-content h3 { font-size: 16px; letter-spacing: -.03em; margin: 0 0 5px; }
+    .product-content p { color: var(--muted); font-size: 11px; line-height: 1.55; margin: 0 0 13px; min-height: 35px; }
+    .text-link { color: var(--red); font-size: 11px; font-weight: 900; display: inline-flex; gap: 6px; align-items: center; }
+    .mini-art { height: 100%; display: grid; place-items: center; position: relative; overflow: hidden; }
+    .mini-art.stationery { background: #dfe9df; }
+    .mini-art.merch { background: #f7ded7; }
+    .paper-stack { width: 125px; height: 145px; background: #fff; border-radius: 5px; transform: rotate(-8deg); box-shadow: 8px 10px 0 rgba(0,0,0,.09); position: relative; }
+    .paper-stack:before { content: "SUMBERMAS"; position: absolute; left: 12px; top: 18px; font-size: 9px; color: var(--red); font-weight: 900; }
+    .paper-stack:after { content: "PRINT\A YOUR\A IDEAS"; white-space: pre; position: absolute; left: 12px; top: 44px; color: #202020; font-size: 19px; font-weight: 950; line-height: .95; letter-spacing: -.08em; }
+    .merch-shape { width: 145px; height: 116px; background: var(--red); border-radius: 18px 18px 30px 30px; position: relative; box-shadow: 12px 13px 0 rgba(0,0,0,.08); transform: rotate(5deg); }
+    .merch-shape:before { content: ""; position: absolute; width: 60px; height: 38px; border: 8px solid var(--red); border-bottom: 0; border-radius: 40px 40px 0 0; top: -29px; left: 35px; }
+    .merch-shape:after { content: "S"; position: absolute; color: var(--yellow); font-weight: 950; font-size: 49px; top: 26px; left: 55px; }
+    .service-band { background: #f0eee7; }
+    .service-layout { display: grid; grid-template-columns: .9fr 1.1fr; gap: 55px; align-items: center; }
+    .service-poster { background: var(--red); color: #fff; min-height: 360px; border-radius: 24px; padding: 35px; position: relative; overflow: hidden; }
+    .service-poster:before { content: ""; position: absolute; height: 270px; width: 270px; border-radius: 50%; background: var(--yellow); right: -80px; bottom: -105px; }
+    .service-poster:after { content: "✳"; position: absolute; right: 34px; bottom: 5px; font-size: 180px; line-height: 1; color: rgba(255,255,255,.24); }
+    .service-poster strong { display: block; font-size: 43px; line-height: .95; letter-spacing: -.07em; max-width: 250px; position: relative; z-index: 1; }
+    .service-poster span { display: inline-block; margin-top: 18px; font-size: 11px; font-weight: 900; letter-spacing: .12em; text-transform: uppercase; color: var(--yellow); position: relative; z-index: 1; }
+    .service-poster small { position: absolute; left: 35px; bottom: 30px; color: rgba(255,255,255,.8); font-size: 11px; z-index: 2; }
+    .service-list { display: grid; grid-template-columns: 1fr 1fr; gap: 0 25px; margin-top: 27px; }
+    .service-item { display: flex; gap: 11px; padding: 15px 0; border-bottom: 1px solid #dedbd3; }
+    .service-check { flex: 0 0 24px; width: 24px; height: 24px; display: grid; place-items: center; border-radius: 8px; background: #fff; color: var(--red); font-size: 12px; font-weight: 900; }
+    .service-item strong { display: block; font-size: 12px; margin-bottom: 3px; }
+    .service-item small { display: block; color: var(--muted); font-size: 10px; }
+    .order-section { padding: 86px 0; }
+    .order-box { background: var(--ink); color: #fff; border-radius: 28px; padding: 47px; display: grid; grid-template-columns: 1fr 1fr; gap: 50px; position: relative; overflow: hidden; }
+    .order-box:after { content: ""; width: 310px; height: 310px; border-radius: 50%; border: 1px solid rgba(248,201,40,.3); position: absolute; left: -160px; bottom: -200px; }
+    .order-box h2 { max-width: 390px; }
+    .order-box .kicker { color: var(--yellow); }
+    .order-copy { color: #bdbdbd; font-size: 13px; max-width: 390px; margin-top: 17px; }
+    .order-note { font-size: 11px; color: #a7a7a7; margin-top: 27px; }
+    .order-form { background: #fff; color: var(--ink); border-radius: 19px; padding: 24px; z-index: 1; }
+    .field { margin-bottom: 13px; }
+    .field label { display: block; font-size: 10px; font-weight: 900; margin-bottom: 6px; color: #4e4e4e; }
+    .field input, .field select, .field textarea { width: 100%; border: 1px solid #e7e4de; background: #fbfaf7; border-radius: 10px; padding: 11px 12px; outline: none; font-size: 12px; color: var(--ink); }
+    .field input:focus, .field select:focus, .field textarea:focus { border-color: var(--red); box-shadow: 0 0 0 3px rgba(227,59,47,.09); }
+    .field textarea { resize: vertical; min-height: 76px; }
+    .order-form .btn { width: 100%; font-size: 12px; }
+    .locations { background: #fff; }
+    .location-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    .location-card { border: 1px solid var(--line); border-radius: 18px; overflow: hidden; background: #fff; }
+    .map-frame { height: 170px; background: #eeece6; position: relative; }
+    .map-frame iframe { border: 0; width: 100%; height: 100%; filter: grayscale(.55) contrast(.92); }
+    .loc-content { padding: 18px; }
+    .loc-tag { font-size: 9px; font-weight: 900; letter-spacing: .12em; text-transform: uppercase; color: var(--red); }
+    .loc-content h3 { font-size: 16px; letter-spacing: -.03em; margin: 5px 0 7px; }
+    .loc-content p { color: var(--muted); font-size: 11px; min-height: 37px; margin: 0 0 12px; }
+    .loc-contact { display: flex; flex-wrap: wrap; align-items: center; gap: 7px; margin-bottom: 13px; }
+    .phone { font-size: 11px; font-weight: 900; }
+    .wa-small { color: var(--green); font-size: 10px; font-weight: 900; }
+    .loc-actions { display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--line); padding-top: 13px; }
+    .loc-actions a { color: var(--red); font-size: 10px; font-weight: 900; }
+    .closing { padding: 62px 0; background: var(--yellow); }
+    .closing-inner { display: flex; justify-content: space-between; align-items: center; gap: 30px; }
+    .closing h2 { max-width: 620px; font-size: clamp(31px, 4vw, 49px); }
+    .closing .btn { background: var(--ink); box-shadow: none; white-space: nowrap; }
+    footer { background: #171717; color: #fff; padding: 38px 0 24px; }
+    .footer-grid { display: grid; grid-template-columns: 1.2fr .8fr .8fr; gap: 45px; padding-bottom: 32px; }
+    .footer-brand p { color: #aaa; font-size: 11px; max-width: 320px; margin-top: 16px; }
+    footer .brand-sub { color: #aaa; }
+    .footer-col strong { display: block; font-size: 11px; margin-bottom: 13px; letter-spacing: .08em; text-transform: uppercase; }
+    .footer-col a, .footer-col p { display: block; color: #aaa; font-size: 11px; margin: 7px 0; }
+    .footer-col a:hover { color: var(--yellow); }
+    .copyright { border-top: 1px solid #373737; padding-top: 18px; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; color: #858585; font-size: 10px; }
+    .floating-wa { position: fixed; right: 20px; bottom: 20px; z-index: 25; width: 56px; height: 56px; display: grid; place-items: center; border-radius: 50%; background: #18a765; color: #fff; box-shadow: 0 9px 25px rgba(0,0,0,.2); transition: .2s; }
+    .floating-wa:hover { transform: translateY(-4px); }
+    .floating-wa svg { width: 27px; height: 27px; }
+
+    .price-row { display:flex; flex-wrap:wrap; align-items:baseline; gap:6px; margin:0 0 10px; }
+    .price-label { font-size:9px; color:#827d73; font-weight:700; text-transform:uppercase; letter-spacing:.08em; }
+    .price-value { font-size:14px; font-weight:950; color:var(--red); letter-spacing:-.03em; }
+    .price-unit { font-size:9px; color:var(--muted); }
+    .price-note { font-size:9px; color:#858078; margin:0 0 10px; line-height:1.4; }
+    .price-variants { display:grid; gap:5px; border-top:1px solid var(--line); padding-top:9px; margin:0 0 11px; }
+    .price-variant { display:flex; justify-content:space-between; gap:10px; color:#5e5a53; font-size:10px; }
+    .price-variant strong { color:#272727; font-size:10px; white-space:nowrap; }
+    .product-content { display:flex; flex-direction:column; align-items:flex-start; }
+    .product-content .text-link { margin-top:auto; padding-top:8px; }
+    .email-contact { color:#aaa; font-size:11px; display:block; margin-top:8px; }
+    .branch-email { display:block; color:var(--muted); font-size:10px; margin:0 0 10px; }
+    .empty-state { grid-column:1/-1; padding:30px; text-align:center; color:var(--muted); background:#fff; border:1px dashed var(--line); border-radius:16px; font-size:12px; }
+    .contact-note { font-size:10px; color:#8e8a83; margin-top:8px; }
+
+    @media (max-width: 900px) {
+      .nav-links { gap: 16px; }
+      .hero-grid { gap: 25px; }
+      .hero-art { min-height: 370px; }
+      .art-frame { height: 305px; }
+      .product-grid { grid-template-columns: repeat(2, 1fr); }
+      .service-layout { gap: 30px; }
+      .location-grid { grid-template-columns: 1fr 1fr; }
+      .location-card:last-child { grid-column: 1 / -1; }
+    }
+    @media (max-width: 680px) {
+      .container { width: min(100% - 30px, 500px); }
+      .topline-inner { justify-content: center; text-align: center; min-height: 32px; }
+      .topline span { display: none; }
+      .nav { min-height: 68px; }
+      .menu-toggle { display: inline-flex; }
+      .nav-cta { display: none; }
+      .nav-links { display: none; position: absolute; top: 68px; left: 0; right: 0; padding: 14px 22px 20px; background: var(--paper); border-bottom: 1px solid var(--line); flex-direction: column; align-items: flex-start; gap: 17px; }
+      .nav-links.open { display: flex; }
+      .hero { padding: 55px 0 48px; }
+      .hero-grid { grid-template-columns: 1fr; gap: 22px; }
+      h1 { font-size: clamp(44px, 14vw, 62px); }
+      .hero-copy { font-size: 14px; }
+      .hero-art { min-height: 315px; }
+      .art-frame { height: 265px; width: 88%; }
+      .art-badge { width: 104px; height: 104px; font-size: 11px; right: 0; bottom: 0; }
+      .art-badge span { font-size: 20px; }
+      .floating-label { left: -1%; top: 3%; }
+      .strip-inner { display: grid; grid-template-columns: 1fr 1fr; }
+      .strip-item { font-size: 10px; }
+      section { padding: 63px 0; }
+      .section-head { display: block; }
+      .section-desc { margin-top: 14px; }
+      .product-grid { gap: 11px; }
+      .product-image { height: 145px; }
+      .product-content { padding: 13px; }
+      .product-content h3 { font-size: 14px; }
+      .product-content p { font-size: 10px; min-height: 48px; }
+      .service-layout { grid-template-columns: 1fr; }
+      .service-poster { min-height: 300px; }
+      .service-list { gap: 0 15px; }
+      .order-section { padding: 63px 0; }
+      .order-box { grid-template-columns: 1fr; padding: 28px 20px; gap: 24px; }
+      .order-form { padding: 18px; }
+      .location-grid { grid-template-columns: 1fr; }
+      .location-card:last-child { grid-column: auto; }
+      .map-frame { height: 155px; }
+      .closing-inner { display: block; }
+      .closing .btn { margin-top: 20px; }
+      .footer-grid { grid-template-columns: 1fr 1fr; gap: 25px; }
+      .footer-brand { grid-column: 1 / -1; }
+      .copyright { display: block; line-height: 1.8; }
+    }
+  </style>
+</head>
+<body>
+  <div class="topline">
+    <div class="container topline-inner">
+      <span id="toplineText">DIGITAL PRINTING · OFFSET · HOT PRINT</span>
+      <a id="toplineInstagram" href="https://www.instagram.com/cetakcepatsumbermas/" target="_blank" rel="noopener">Ikuti katalog kami di Instagram ↗</a>
+    </div>
+  </div>
+  <header>
+    <div class="container nav">
+      <a class="brand" href="#beranda" aria-label="Cetak Cepat SumberMas Beranda">
+        <span class="brand-mark"><svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M7 22.5 13.5 9h5L25 22.5h-5l-1.1-2.7h-6l-1.1 2.7H7Z" fill="#fff"/><path d="M14.4 16.4h4.2l-2.1-5.2-2.1 5.2Z" fill="#F8C928"/></svg></span>
+        <span><span class="brand-name" id="brandName">SUMBERMAS</span><span class="brand-sub" id="brandTagline">CETAK CEPAT FULL COLOUR</span></span>
+      </a>
+      <nav class="nav-links" id="navLinks">
+        <a href="#layanan">Layanan</a><a href="#katalog">Katalog</a><a href="#lokasi">Lokasi</a><a href="#kontak">Kontak</a>
+      </nav>
+      <a class="nav-cta" href="#kontak">Konsultasi Cetak <span>↗</span></a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Buka menu" aria-expanded="false">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="beranda">
+      <div class="container hero-grid">
+        <div>
+          <div class="eyebrow"><i></i><span id="heroEyebrow">Solusi cetak untuk setiap kebutuhan</span></div>
+          <h1><span id="heroTitlePrefix">Cetak ide jadi</span> <span class="accent" id="heroTitleAccent">nyata.</span></h1>
+          <p class="hero-copy" id="heroDescription">Dari kebutuhan promosi dan perlengkapan bisnis hingga momen spesial. Wujudkan desain Anda dengan layanan SumberMas.</p>
+          <div class="hero-actions"><a class="btn" href="#kontak">Pesan via WhatsApp <span>↗</span></a><a class="btn secondary" href="#katalog">Lihat katalog <span>↓</span></a></div>
+          <div class="hero-proof"><span class="proof-dot">✓</span><span id="heroProof">Melayani kebutuhan cetak personal, bisnis, perusahaan, dan instansi.</span></div>
+        </div>
+        <div class="hero-art" aria-label="Contoh produk cetak SumberMas">
+          <div class="art-back"></div><div class="floating-label">FULL COLOUR PRINTING<small>Detail cetak yang menarik perhatian</small></div>
+          <div class="art-frame" id="heroImageFrame"><img id="heroImage" src="" alt="Contoh produk cetak SumberMas" /></div>
+          <div class="art-badge"><div><span>100%</span>IDE ANDA,<br/>CETAK KAMI</div></div>
+        </div>
+      </div>
+    </section>
+
+    <div class="strip"><div class="container strip-inner" id="serviceStrip"></div></div>
+
+    <section id="katalog">
+      <div class="container">
+        <div class="section-head"><div><div class="kicker">Katalog produk</div><h2>Semua kebutuhan cetak,<br/>di satu tempat.</h2></div><p class="section-desc" id="catalogDescription">Pilih kategori untuk melihat produk. Untuk ukuran, bahan, jumlah, dan estimasi harga, konsultasikan dengan tim kami.</p></div>
+        <div class="filter-row" id="productFilters" role="group" aria-label="Filter kategori katalog"></div>
+        <div class="product-grid" id="productGrid"><div class="empty-state">Memuat katalog produk...</div></div>
+      </div>
+    </section>
+
+    <section class="service-band" id="layanan">
+      <div class="container service-layout">
+        <div class="service-poster"><strong id="servicePosterTitle">MAKE IT<br/>PRINT.<br/>MAKE IT<br/>MATTER.</strong><span id="servicePosterSubtitle">Print that speaks for your brand</span><small id="servicePosterFooter">CETAK CEPAT FULL COLOUR SUMBERMAS</small></div>
+        <div><div class="kicker">Layanan SumberMas</div><h2>Dari file desain<br/>hingga hasil cetak.</h2><p class="section-desc" style="margin-top:15px" id="serviceDescription">Kami melayani beragam kebutuhan cetak untuk perorangan, pelaku usaha, perusahaan, dan instansi.</p><div class="service-list" id="serviceList"></div></div>
+      </div>
+    </section>
+
+    <section class="order-section" id="kontak">
+      <div class="container"><div class="order-box">
+        <div><div class="kicker">Mulai konsultasi</div><h2>Punya kebutuhan cetak? Ceritakan kepada kami.</h2><p class="order-copy">Isi detail singkat di samping. Kami akan siapkan pesan WhatsApp agar tim cabang pilihan Anda bisa menindaklanjuti kebutuhan cetak.</p><p class="order-note">Harga dan estimasi produksi menyesuaikan jenis produk, ukuran, bahan, jumlah, dan finishing.</p></div>
+        <form class="order-form" id="orderForm">
+          <div class="field"><label for="customerName">Nama Anda</label><input id="customerName" name="name" placeholder="Contoh: Andi" autocomplete="name" required /></div>
+          <div class="field"><label for="productSelect">Produk yang dibutuhkan</label><select id="productSelect" name="product" required><option value="">Pilih produk</option></select></div>
+          <div class="field"><label for="branchSelect">Hubungi cabang</label><select id="branchSelect" name="branch" required><option value="">Pilih cabang</option></select></div>
+          <div class="field"><label for="orderDetails">Detail kebutuhan</label><textarea id="orderDetails" name="details" placeholder="Ukuran, jumlah, bahan, deadline, atau pertanyaan lainnya..."></textarea></div>
+          <button class="btn" type="submit">Lanjutkan ke WhatsApp <span>↗</span></button>
+          <p class="contact-note">WhatsApp akan terbuka dengan pesan yang sudah disiapkan. Anda tetap dapat mengedit pesan sebelum mengirim.</p>
+        </form>
+      </div></div>
+    </section>
+
+    <section class="locations" id="lokasi">
+      <div class="container"><div class="section-head"><div><div class="kicker">Temukan cabang</div><h2>Lebih dekat dengan<br/>kebutuhan cetak Anda.</h2></div><p class="section-desc">Silakan hubungi cabang terdekat untuk konsultasi produk, informasi harga, dan proses pemesanan.</p></div><div class="location-grid" id="locationGrid"></div></div>
+    </section>
+
+    <section class="closing"><div class="container closing-inner"><h2 id="closingTitle">Siap membuat brand Anda lebih terlihat?</h2><a class="btn" id="closingCta" href="#kontak">Mulai konsultasi <span>↗</span></a></div></section>
+  </main>
+
+  <footer><div class="container"><div class="footer-grid">
+    <div class="footer-brand"><a class="brand" href="#beranda"><span class="brand-mark"><svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M7 22.5 13.5 9h5L25 22.5h-5l-1.1-2.7h-6l-1.1 2.7H7Z" fill="#fff"/><path d="M14.4 16.4h4.2l-2.1-5.2-2.1 5.2Z" fill="#F8C928"/></svg></span><span><span class="brand-name" id="footerBrandName">SUMBERMAS</span><span class="brand-sub" id="footerBrandTagline">CETAK CEPAT FULL COLOUR</span></span></a><p id="footerDescription">Solusi digital printing, offset printing, dan hot print untuk kebutuhan promosi, bisnis, event, dan personal.</p><a class="email-contact" id="footerEmail" hidden></a></div>
+    <div class="footer-col"><strong>Jelajahi</strong><a href="#layanan">Layanan</a><a href="#katalog">Katalog produk</a><a href="#lokasi">Lokasi cabang</a><a id="footerInstagram" href="https://www.instagram.com/cetakcepatsumbermas/" target="_blank" rel="noopener">Instagram ↗</a></div>
+    <div class="footer-col"><strong>Kontak cabang</strong><div id="footerContacts"></div></div>
+  </div><div class="copyright"><span>© <span id="year"></span> <span id="copyrightBrand">Cetak Cepat SumberMas</span>. All rights reserved.</span><span id="copyrightLine">Digital Printing · Offset · Hot Print</span></div></div></footer>
+
+  <a class="floating-wa" id="floatingWhatsApp" href="#kontak" target="_blank" rel="noopener" aria-label="Chat WhatsApp SumberMas"><svg viewBox="0 0 32 32" fill="currentColor" aria-hidden="true"><path d="M16.04 3C8.87 3 3.04 8.78 3.04 15.9c0 2.28.6 4.5 1.74 6.45L3 29l6.85-1.78a13.1 13.1 0 0 0 6.19 1.56h.01c7.16 0 13-5.79 13-12.9 0-3.45-1.35-6.69-3.8-9.13A12.94 12.94 0 0 0 16.04 3Zm0 23.58h-.01c-1.9 0-3.76-.5-5.39-1.47l-.39-.23-4.06 1.05 1.08-3.94-.25-.4a10.68 10.68 0 0 1-1.65-5.69c0-5.9 4.82-10.7 10.68-10.7 2.84 0 5.52 1.1 7.53 3.13a10.6 10.6 0 0 1 3.13 7.56c0 5.9-4.81 10.69-10.67 10.69Zm5.86-8.01c-.32-.16-1.9-.93-2.2-1.04-.3-.11-.51-.16-.73.16-.21.32-.84 1.04-1.03 1.25-.19.22-.38.24-.7.08-.32-.16-1.35-.5-2.57-1.59-.95-.85-1.59-1.9-1.78-2.22-.19-.32-.02-.49.14-.65.14-.14.32-.38.48-.57.16-.19.21-.32.32-.54.1-.21.05-.4-.03-.56-.08-.16-.73-1.74-1-2.38-.26-.62-.53-.54-.73-.55h-.62c-.21 0-.56.08-.86.4-.3.33-1.13 1.1-1.13 2.68 0 1.58 1.16 3.1 1.32 3.31.16.21 2.28 3.46 5.52 4.85.77.33 1.37.53 1.84.68.77.24 1.47.21 2.02.13.62-.09 1.9-.78 2.17-1.53.27-.75.27-1.39.19-1.53-.08-.13-.29-.21-.61-.37Z"/></svg></a>
+
+  <script src="content.js"></script>
+  <script src="site.js" defer></script>
+</body>
+</html>
